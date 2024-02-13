@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react"
 import { addRoom } from "../utils/ApiFunctions"
 import RoomTypeSelector from "../common/RoomTypeSelector"
@@ -39,7 +38,7 @@ const AddRoom = () => {
 		try {
 			const success = await addRoom(newRoom.photo, newRoom.roomType, newRoom.roomPrice)
 			if (success !== undefined) {
-				setSuccessMessage("A new room is added successfully !")
+				setSuccessMessage("A new room is added successfully!")
 				setNewRoom({ photo: null, roomType: "", roomPrice: "" })
 				setImagePreview("")
 				setErrorMessage("")
