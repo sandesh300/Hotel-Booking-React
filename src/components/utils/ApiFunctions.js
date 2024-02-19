@@ -5,11 +5,11 @@ export const api = axios.create({
 })
 
 export const getHeader = () => {
-	// const token = localStorage.getItem("token")
-	// return {
-	// 	Authorization: `Bearer ${token}`,
-	// 	"Content-Type": "application/json"
-	// }
+	const token = localStorage.getItem("token")
+	return {
+		Authorization: `Bearer ${token}`,
+		"Content-Type": "application/json"
+	}
 }
 
 /* This function adds a new room room to the database */
