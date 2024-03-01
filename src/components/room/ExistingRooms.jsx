@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react"
 import { deleteRoom, getAllRooms } from "../utils/ApiFunctions"
 import { Col, Row } from "react-bootstrap"
@@ -13,7 +12,6 @@ const ExistingRooms = () => {
 	const [roomsPerPage] = useState(8)
 	const [isLoading, setIsLoading] = useState(false)
 	const [filteredRooms, setFilteredRooms] = useState([{ id: "", roomType: "", roomPrice: "" }])
-	// eslint-disable-next-line no-unused-vars
 	const [selectedRoomType, setSelectedRoomType] = useState("")
 	const [errorMessage, setErrorMessage] = useState("")
 	const [successMessage, setSuccessMessage] = useState("")

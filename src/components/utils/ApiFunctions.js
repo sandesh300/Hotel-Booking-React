@@ -4,13 +4,13 @@ export const api = axios.create({
 	baseURL: "http://localhost:8080"
 })
 
-export const getHeader = () => {
-	const token = localStorage.getItem("token")
-	return {
-		Authorization: `Bearer ${token}`,
-		"Content-Type": "application/json"
-	}
-}
+// export const getHeader = () => {
+// 	const token = localStorage.getItem("token")
+// 	return {
+// 		Authorization: `Bearer ${token}`,
+// 		"Content-Type": "application/json"
+// 	}
+// }
 
 /* This function adds a new room room to the database */
 export async function addRoom(photo, roomType, roomPrice) {
@@ -20,7 +20,7 @@ export async function addRoom(photo, roomType, roomPrice) {
 	formData.append("roomPrice", roomPrice)
 
 	const response = await api.post("/rooms/add/new-room", formData,{
-		headers: getHeader()
+		// headers: getHeader()
 	})
 	if (response.status === 201) {
 		return true
