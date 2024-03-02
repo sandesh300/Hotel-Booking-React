@@ -40,24 +40,12 @@ export async function getRoomTypes() {
 }
 /* This function gets all rooms from the database */
 export async function getAllRooms() {
-    try {
-        const result = await api.get("/rooms/all-rooms");
-        return result.data;
-    } catch (error) {
-        if (error.response) {
-            // The request was made and the server responded with a status code
-            // that falls out of the range of 2xx
-            console.error("Server responded with error status:", error.response.status);
-            console.error("Error data:", error.response.data);
-        } else if (error.request) {
-            // The request was made but no response was received
-            console.error("No response received from the server");
-        } else {
-            // Something happened in setting up the request that triggered an Error
-            console.error("Error setting up the request:", error.message);
-        }
-        throw new Error("Error fetching rooms");
-    }
+	try {
+		const result = await api.get("/rooms/all-rooms")
+		return result.data
+	} catch (error) {
+		throw new Error("Error fetching rooms")
+	}
 }
 
 /* This function deletes a room by the Id */
@@ -69,5 +57,27 @@ export async function deleteRoom(roomId) {
 		return result.data
 	} catch (error) {
 		throw new Error(`Error deleting room ${error.message}`)
+	}
+}
+
+/* This function update a room */
+export async function updateRoom(roomId, roomData) {
+	const formData = new FormData()
+	formData.append("roomType", roomData.roomType)
+	formData.append("roomPrice", roomData.roomPrice)
+	formData.append("photo", roomData.photo)
+	const response = await api.put(`/rooms/update/${roomId}`, formData,{
+		// headers: getHeader()
+	})
+	return response
+}
+
+/* This function gets a room by Id*/
+export async function getRoomById(roomId) {
+	try {
+		const result = await api.get(`/rooms/${roomId}`)
+		return  result.data
+	} catch (error) {
+		throw new Error(`Error fetching room ${error.message}`)
 	}
 }
