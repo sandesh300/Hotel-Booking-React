@@ -11,6 +11,7 @@ import EditRoom from "./components/room/EditRoom";
 import Footer from "./components/layout/Footer";
 import NavBar from "./components/layout/Navbar";
 import RoomListing from "./components/room/RoomListing";
+import Admin from "./components/admin/Admin";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/existing-rooms" element={<ExistingRooms />} />
             <Route path="/add-room" element={<AddRoom />} />
             <Route path="/browse-all-rooms" element={<RoomListing />} />
+            <Route path="/admin" element={<Admin />} />
 
           </Routes>
         </Router>
