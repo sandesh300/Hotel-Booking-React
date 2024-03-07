@@ -71,7 +71,7 @@ const NavBar = () => {
 								className={`dropdown-menu ${showAccount ? "show" : ""}`}
 								aria-labelledby="navbarDropdown">
 								{isLoggedIn ? (
-									<Logout />
+									{/* <Logout /> */}
 								) : (
 									<li>
 										<Link className="dropdown-item" to={"/login"}>
