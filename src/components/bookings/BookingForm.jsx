@@ -13,11 +13,11 @@ const BookingForm = () => {
 	const [errorMessage, setErrorMessage] = useState("")
 	const [roomPrice, setRoomPrice] = useState(0)
 
-const currentUser = localStorage.getItem("userId")
+// const currentUser = localStorage.getItem("userId")
 
 	const [booking, setBooking] = useState({
 		guestFullName: "",
-		guestEmail: currentUser,
+		guestEmail: "",
 		checkInDate: "",
 		checkOutDate: "",
 		numOfAdults: "",
@@ -134,7 +134,7 @@ const currentUser = localStorage.getItem("userId")
 										value={booking.guestEmail}
 										placeholder="Enter your email"
 										onChange={handleInputChange}
-										disabled
+										// disabled
 									/>
 									<Form.Control.Feedback type="invalid">
 										Please enter a valid email address.
