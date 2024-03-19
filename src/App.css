@@ -40,3 +40,201 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+  text-align: center;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #084b93;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7fb1fc; 
+  cursor: pointer; 
+}
+
+.room-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.room-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.room-image:hover img {
+  transform: scale(1.1);
+}
+
+.room-details {
+  padding: 1rem;
+}
+
+.room-type {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.room-price {
+  font-size: 1rem;
+  color: #666;
+}
+
+.room-info {
+  margin-top: 1rem;
+  color: #888;
+}
+
+.book-now-button {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn-hotel {
+  background-color: #560781;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hotel:hover {
+  background-color: #9949f5;
+  cursor: pointer;
+}
+
+.bookings-table-container {
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #221d1f;
+  color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.no-booking-message {
+  margin-top: 10px;
+  text-align: center;
+  color: #666;
+}
+
+/* NavBar.css */
+
+.navbar {
+  background-color: #007bff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  color: #bb1616;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #b91616;
+  text-decoration: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #b81b1b;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px;
+}
+
+.nav-link {
+  color: #c11f1f !important;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #b02424 !important;
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+  background-color: #871497;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+.dropdown-item {
+  color: #fff !important;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.dropdown-item:hover {
+  background-color: #360303 !important;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+}
+
+@media (max-width: 767px) {
+  .dropdown-menu {
+      background-color: #e6ecf4;
+  }
+}
