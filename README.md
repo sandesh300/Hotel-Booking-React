@@ -1,4 +1,4 @@
-# Hotel Booking App README
+# Hotel Booking App 
 
 ## Introduction
 This repository contains the source code for a Hotel Booking App built using Java, Spring Boot, React, MySQL, and JWT authentication. The application allows users to search for hotels, view details, make bookings, and manage their reservations.
