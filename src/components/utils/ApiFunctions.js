@@ -181,3 +181,16 @@ export async function getUserProfile(userId, token) {
 		throw error
 	}
 }
+
+/* This isthe function to delete a user */
+export async function deleteUser(userId) {
+    try {
+		const response = await api.delete(`/users/delete/${userId}`,{
+			headers:getHeader()
+		})
+		return response.data
+	} catch (error) {
+		throw error
+	}
+}
+
