@@ -5,7 +5,7 @@ import { Form, FormControl, Button } from "react-bootstrap"
 import BookingSummary from "./BookingSummary"
 import { bookRoom, getRoomById } from "../utils/ApiFunctions"
 import { useNavigate, useParams } from "react-router-dom"
-// import { useAuth } from "../auth/AuthProvider"
+import { useAuth } from "../auth/AuthProvider"
 
 const BookingForm = () => {
 	const [validated, setValidated] = useState(false)
@@ -13,11 +13,11 @@ const BookingForm = () => {
 	const [errorMessage, setErrorMessage] = useState("")
 	const [roomPrice, setRoomPrice] = useState(0)
 
-// const currentUser = localStorage.getItem("userId")
+const currentUser = localStorage.getItem("userId")
 
 	const [booking, setBooking] = useState({
 		guestFullName: "",
-		guestEmail: "",
+		guestEmail: currentUser,
 		checkInDate: "",
 		checkOutDate: "",
 		numOfAdults: "",
