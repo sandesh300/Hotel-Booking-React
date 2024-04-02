@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import BookingForm from "../booking/BookingForm"
 import {
 	FaUtensils,
 	FaWifi,
@@ -12,7 +13,6 @@ import {
 import { useParams } from "react-router-dom"
 import { getRoomById } from "../utils/ApiFunctions"
 import RoomCarousel from "../common/RoomCarousel"
-import BookingForm from "./BookingForm"
 
 const Checkout = () => {
 	const [error, setError] = useState(null)
